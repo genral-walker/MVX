@@ -1,12 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{html,js}'],
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    colors: {
-      orange: '#FF8A00',
-      blue: '#005ECD',
+    fontFamily: {
+      primary: ['Montserrat', 'sans-serif'],
+      secondary: ['"Catalina Rayden"', 'serif'],
     },
-    extend: {},
+    extend: {
+      colors: {
+        orange: '#FF8A00',
+        blue: '#005ECD',
+      },
+    },
   },
   plugins: [],
 };
