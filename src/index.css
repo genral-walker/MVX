@@ -9,7 +9,15 @@
     font-family: Montserrat, sans-serif;
   }
 
+  @media only screen and (max-width: 999px) {
+    html {
+      font-size: 87.5%;
+      /* 87.5, 93.75,*/
+    }
+  }
+
   /* button {
     @apply border border-black rounded-xl px-5 py-1
   } */
+
 }
