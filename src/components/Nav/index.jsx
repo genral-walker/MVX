@@ -6,7 +6,8 @@ import { useState } from 'react';
 export const Nav = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   return (
-    <nav className="bg-white fixed xs:relative left-0 transition duration-300 w-[100vw] xs:w-[unset] xs:rounded-2xl xs:mx-4 900:mx-7 1100:mx-16 flex items-center py-4 px-8 800:px-6 1100:px-16 justify-between">
+    // mx-0 xs:mx-4 900:mx-7 1100:mx-16
+    <nav className="xs:mx-4 900:!mx-7 1100:!mx-16 bg-white fixed xs:static left-0 transition duration-300 w-[100vw] xs:w-[unset] xs:rounded-2xl flex items-center py-4 px-8 800:px-6 1100:px-16 justify-between">
       <a href="#">
         <HeroIcon className="cursor-pointer w-20 xs:w-[unset]" />
       </a>
@@ -33,7 +34,10 @@ export const Nav = () => {
         </a>
         <Button>Sign up</Button>
       </div>
-      <MenuIcon className="800:hidden h-8" onClick={() => setDrawerOpen(true)} />
+      <MenuIcon
+        className="800:hidden h-8"
+        onClick={() => setDrawerOpen(true)}
+      />
     </nav>
   );
 };
