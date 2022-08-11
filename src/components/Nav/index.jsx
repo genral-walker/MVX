@@ -3,7 +3,7 @@ import { Button } from 'components';
 
 export const Nav = () => {
   return (
-    <nav className="bg-white rounded-2xl mx-40 flex items-center py-4 px-12 justify-between">
+    <nav className="bg-white rounded-2xl mx-16 flex items-center py-4 px-12 justify-between">
       <a href="#">
         <HeroIcon className="cursor-pointer" />
       </a>
@@ -28,7 +28,7 @@ export const Nav = () => {
         <a href="#" className="mr-4">
           Sign in
         </a>
-        <Button btnType="secondary">Sign up</Button>
+        <Button>Sign up</Button>
       </div>
     </nav>
   );
