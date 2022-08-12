@@ -1,5 +1,9 @@
 import { ReactComponent as HeroIcon } from 'assets/icons/hero-icon.svg';
 import { ReactComponent as MenuIcon } from 'assets/icons/menu.svg';
+import { ReactComponent as Service1Icon } from 'assets/icons/service-1.svg';
+import { ReactComponent as Service2Icon } from 'assets/icons/service-2.svg';
+import { ReactComponent as Service3Icon } from 'assets/icons/service-3.svg';
+import { ReactComponent as Service4Icon } from 'assets/icons/service-4.svg';
 import { Button } from 'components';
 import { useState } from 'react';
 
@@ -8,60 +12,83 @@ export const Nav = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <nav className="xs:mx-4 900:!mx-7 1100:!mx-16 bg-white fixed xs:static left-0 transition duration-300 w-[100vw] xs:w-[unset] xs:rounded-2xl flex items-center py-4 px-8 800:px-6 1100:px-16 justify-between">
+    <nav className="sm:mx-4 md:!mx-7 lg:!mx-16 bg-white sm:rounded-2xl flex items-center py-4 px-8 sm:px-6 md:px-16 justify-between">
       <a href="#">
-        <HeroIcon className="cursor-pointer w-20 xs:w-[unset]" />
+        <HeroIcon className="cursor-pointer w-20 sm:w-[unset]" />
       </a>
-      <ul className="gap-x-8 text-sm hidden 800:flex">
-        <li className="hover:text-orange focus:text-orange transition duration-300">
+      <ul className="gap-x-8 text-sm hidden sm:flex">
+        <li>
           <a href="#">About</a>
         </li>
-        <li
-          className="relative"
-          onClick={() => setServicesOpen((prev) => !prev)}
-        >
-          <a
-            href="#"
-            className="hover:text-orange focus:text-orange transition duration-300"
-          >
+        <li className="relative">
+          <a href="#" onClick={() => setServicesOpen((prev) => !prev)}>
             Services
           </a>
-          <ul
-            className="origin-top-right absolute right-[-4px] py-[22px] px-7 mt-2 w-32 h-56 rounded-xl shadow-md bg-white"
-            role="menu"
-            aria-orientation="vertical"
-            aria-labelledby="services-pane"
-          >
-            <li>
-              <a href="#" className="" role="menuitem">
-                Account settings
-              </a>
-            </li>
-          </ul>
+          {servicesOpen && (
+            <ul
+              className="origin-top-right absolute left-[-5px] py-[24px] w-[370px] md:w-[420px] px-3 mt-4 rounded-xl shadow-md bg-white"
+              role="menu"
+              aria-orientation="vertical"
+              aria-labelledby="services-pane"
+            >
+              <li className="flex items-center gap-x-[17px] py-[5px] text-gray-600 mb-3 transition duration-[400ms] hover:bg-blue hover:bg-opacity-[0.05] cursor-pointer rounded-[6px]">
+                <Service1Icon className="w-10 h-10 ml-3" />
+                <div className="self-baseline">
+                  <h3 className="font-semibold text-[15px]">
+                    Freight Forwarding
+                  </h3>
+                  <p className="font-normal text-[11px]">
+                    Easy Freight Forwarding Service
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-center gap-x-[17px] py-[5px] text-gray-600 mb-3 transition duration-[400ms] hover:bg-orange hover:bg-opacity-[0.1] cursor-pointer rounded-[6px]">
+                <Service2Icon className="w-10 h-10 ml-3" />
+                <div className="self-baseline">
+                  <h3 className="font-semibold text-[15px]">Freight Finance</h3>
+                  <p className="font-normal text-[11px]">
+                    Get finance for your freight forwarding needs
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-center gap-x-[17px] py-[5px] text-gray-600 mb-3 transition duration-[400ms] hover:bg-blue hover:bg-opacity-[0.05] cursor-pointer rounded-[6px]">
+                <Service3Icon className="w-10 h-10 ml-3" />
+                <div className="self-baseline">
+                  <h3 className="font-semibold text-[15px]">Haulage</h3>
+                  <p className="font-normal text-[11px]">
+                    Overland Logistics You Can Rely On
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-center gap-x-[17px] py-[5px] text-gray-600 mb-3 transition duration-[400ms] hover:bg-orange hover:bg-opacity-[0.1] cursor-pointer rounded-[6px]">
+                <Service4Icon className="w-10 h-10 ml-3" />
+                <div className="self-baseline">
+                  <h3 className="font-semibold text-[15px]">Customs</h3>
+                  <p className="font-normal text-[11px]">
+                    Clear your cargo fast
+                  </p>
+                </div>
+              </li>
+            </ul>
+          )}
         </li>
-        <li className="hover:text-orange focus:text-orange transition duration-300">
+        <li>
           <a href="#">Resources</a>
         </li>
-        <li className="hover:text-orange focus:text-orange transition duration-300">
+        <li>
           <a href="#">Partners</a>
         </li>
-        <li className="hover:text-orange focus:text-orange transition duration-300">
+        <li>
           <a href="#">Speak to us</a>
         </li>
       </ul>
-      <div className="flex items-center hidden 800:block">
-        <a
-          href="#"
-          className="mr-4 hover:text-orange focus:text-orange transition duration-300"
-        >
+      <div className="flex items-center hidden sm:block">
+        <a href="#" className="mr-4">
           Sign in
         </a>
         <Button>Sign up</Button>
       </div>
-      <MenuIcon
-        className="800:hidden h-8"
-        onClick={() => setDrawerOpen(true)}
-      />
+      <MenuIcon className="sm:hidden h-8" onClick={() => setDrawerOpen(true)} />
     </nav>
   );
 };
