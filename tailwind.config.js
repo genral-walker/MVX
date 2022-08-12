@@ -11,6 +11,9 @@ module.exports = {
         blue: '#005ECD',
         black: '#333333,',
       },
+      backgroundImage: {
+        'hero-bg': 'url(assets/images/hero-bg.jpg)',
+      },
     },
   },
   plugins: [],
