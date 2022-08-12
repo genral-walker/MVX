@@ -12,11 +12,11 @@ export const Nav = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <nav className="sm:mx-4 md:!mx-7 lg:!mx-16 bg-white sm:rounded-2xl flex items-center py-4 px-8 sm:px-6 md:px-16 justify-between">
+    <nav className="sm:mx-4 lg:!mx-16 bg-white sm:rounded-2xl flex items-center py-4 px-7 lg:px-16 justify-between fixed sm:!static top-0 left-0 w-[100%] sm:!w-[unset]">
       <a href="#">
         <HeroIcon className="cursor-pointer w-20 sm:w-[unset]" />
       </a>
-      <ul className="gap-x-8 text-sm hidden sm:flex">
+      <ul className="gap-x-8 text-sm hidden md:flex">
         <li>
           <a href="#">About</a>
         </li>
@@ -26,7 +26,7 @@ export const Nav = () => {
           </a>
           {servicesOpen && (
             <ul
-              className="origin-top-right absolute left-[-5px] py-[24px] w-[370px] md:w-[420px] px-3 mt-4 rounded-xl shadow-md bg-white"
+              className="origin-top-right hidden md:block absolute left-[-5px] py-[24px] w-[370px] md:w-[420px] px-3 mt-5 rounded-xl shadow-md bg-white"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="services-pane"
@@ -82,13 +82,13 @@ export const Nav = () => {
           <a href="#">Speak to us</a>
         </li>
       </ul>
-      <div className="flex items-center hidden sm:block">
+      <div className="hidden md:flex items-center">
         <a href="#" className="mr-4">
           Sign in
         </a>
         <Button>Sign up</Button>
       </div>
-      <MenuIcon className="sm:hidden h-8" onClick={() => setDrawerOpen(true)} />
+      <MenuIcon className="md:hidden h-8" onClick={() => setDrawerOpen(true)} />
     </nav>
   );
 };
