@@ -10,7 +10,6 @@ import { ReactComponent as LeftIcon } from 'assets/icons/left.svg';
 import { Button } from 'components';
 import { useState } from 'react';
 
-
 export const Nav = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -87,7 +86,7 @@ export const Nav = () => {
                   onClick={() => setDrawerOpen(false)}
                 />
               </div>
-              <ul className="gap-4 text-md flex flex-col mt-14">
+              <ul className="gap-6 text-md flex flex-col mt-14">
                 <li>
                   <a href="#">About</a>
                 </li>
