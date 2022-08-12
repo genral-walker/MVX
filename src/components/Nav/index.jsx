@@ -83,7 +83,7 @@ export const Nav = () => {
                   <HeroIcon className="cursor-pointer w-20 sm:w-[unset]" />
                 </a>
                 <CancelIcon
-                  className="h-8 translate-x-[4px]"
+                  className="h-8 translate-x-[4px] cursor-pointer"
                   onClick={() => setDrawerOpen(false)}
                 />
               </div>
