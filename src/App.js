@@ -4,6 +4,12 @@ import { ReactComponent as DownArrowIcon } from 'assets/icons/down-arrow.svg';
 import { ReactComponent as PopupIcon } from 'assets/icons/popup.svg';
 import { ReactComponent as HeroIcon } from 'assets/icons/hero-icon.svg';
 import { ReactComponent as PlayIcon } from 'assets/icons/play.svg';
+import { ReactComponent as FooterIcon } from 'assets/icons/footer-icon.svg';
+import { ReactComponent as FbIcon } from 'assets/icons/fb.svg';
+import { ReactComponent as MediumIcon } from 'assets/icons/medium.svg';
+import { ReactComponent as Instacon } from 'assets/icons/insta.svg';
+import { ReactComponent as Twittercon } from 'assets/icons/twitter.svg';
+import { ReactComponent as LinkedInIcon } from 'assets/icons/linkedIn.svg';
 
 function App() {
   return (
@@ -44,7 +50,7 @@ function App() {
               </span>
             </div>
           </div>
-          <PopupIcon className="fixed top-[82vh] right-12 w-[70px] cursor-pointer" />
+          <PopupIcon className="fixed top-[82vh] right-8 w-[70px] cursor-pointer" />
 
           <div className="mt-16 sm:mt-10 mb-16">
             <div className="bg-hero-bg bg-no-repeat bg-cover bg-center h-[190px] sm:h-[300px] md:h-[374px] lg:h-[440px] w-[100%] rounded-md grid place-items-center">
@@ -82,7 +88,7 @@ function App() {
         </section>
       </header>
 
-      <section className="bg-blue bg-opacity-[0.03] px-8 lg:px-28 pt-16 pb-12 text-sm">
+      <section className="bg-blue bg-opacity-[0.03] px-8 lg:px-28 pt-16 text-sm pb-8">
         <div className="flex flex-col gap-y-6 md:gap-y-0 md:flex-row md:justify-between px-5 md:px-0">
           <span className="md:basis-[70%] text-center md:text-left">
             <h2 className="font-bold text-[20px] md:text-[25px] mb-4 leading-9">
@@ -98,7 +104,7 @@ function App() {
           </Button>
         </div>
 
-        <footer className="mt-16 sm:mt-24 mb-14">
+        <footer className="mt-16 sm:mt-24">
           <div className="flex flex-wrap justify-between gap-y-7">
             <span className="basis-[23%] hidden sm:block">
               <a href="#">
@@ -158,6 +164,44 @@ function App() {
                 <li className="cursor-pointer">Cookie policy</li>
                 <li className="cursor-pointer">Terms & Conditions</li>
               </ul>
+            </span>
+          </div>
+
+          <div className=" sm:hidden mt-20">
+            <span className="flex justify-between">
+              <p className="font-semibold basis-2/4">T: +2347040119703</p>
+              <p className="font-semibold basis-2/4">E: hello@mvx.trade</p>
+            </span>
+            <div className="text-center">
+              <p className="font-semibold mt-3 mb-2">Lagos:</p>
+              <p>
+                19 Dr. S Ezekuse Close, <br />
+                Lekki Phase 1, Lagos
+              </p>
+            </div>
+            <div className="text-center border-b-[1px] border-[#000] pb-10">
+              <p className="font-semibold mt-3 mb-2">Austin:</p>
+              <p>
+                7000 North Mopac Expressway, <br />
+                Austin, TX, 78731 <br />
+                T: +1 512 514 6221
+              </p>
+            </div>
+          </div>
+
+          <div className="flex justify-between mt-6 sm:mt-16 items-center flex-col sm:flex-row gap-y-5 sm:gap-y-0">
+            <span className="flex items-center flex-col sm:flex-row gap-y-3 sm:gap-y-0">
+              <FooterIcon className="cursor-pointer w-20 sm:w-[unset]" />
+              <p className="self-end ml-3">
+                &copy; MVXchange Technologies Limited
+              </p>
+            </span>
+            <span className="flex gap-x-3 cursor-pointer">
+              <FbIcon />
+              <Instacon />
+              <MediumIcon />
+              <LinkedInIcon />
+              <Twittercon />
             </span>
           </div>
         </footer>

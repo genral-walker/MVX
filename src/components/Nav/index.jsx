@@ -19,7 +19,7 @@ export const Nav = () => {
       {drawerOpen && (
         <>
           {servicesOpen ? (
-            <nav className="bg-white h-[100vh] w-[100vw] fixed top-0 left-0 z-[200] py-4">
+            <nav className="bg-white h-[100vh] w-[100vw] fixed top-0 left-0 z-[500] py-4">
               <div
                 className="flex items-center px-5 pb-5 border-b-[0.4px] border-[#545454] border-solid cursor-pointer"
                 onClick={() => setServicesOpen(false)}
@@ -76,7 +76,7 @@ export const Nav = () => {
               </ul>
             </nav>
           ) : (
-            <nav className="bg-white h-[100vh] w-[100vw] fixed top-0 left-0 z-[200] py-4 px-7 sm:px-8">
+            <nav className="bg-white h-[100vh] w-[100vw] fixed top-0 left-0 z-[400] py-4 px-7 sm:px-8">
               <div className="flex justify-between">
                 <a href="#">
                   <HeroIcon className="cursor-pointer w-20 sm:w-[unset]" />
@@ -121,7 +121,7 @@ export const Nav = () => {
           )}
         </>
       )}
-      <nav className="sm:mx-4 lg:!mx-16 bg-white sm:rounded-2xl flex items-center py-4 px-7 lg:px-16 justify-between fixed sm:!static top-0 left-0 w-[100%] sm:!w-[unset]">
+      <nav className="sm:mx-4 lg:!mx-16 bg-white sm:rounded-2xl flex items-center py-4 px-7 lg:px-16 justify-between fixed sm:!static top-0 left-0 w-[100%] sm:!w-[unset] z-[300]">
         <a href="#">
           <HeroIcon className="cursor-pointer w-20 sm:w-[unset]" />
         </a>
