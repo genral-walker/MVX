@@ -2,12 +2,13 @@ import { Button, Nav } from 'components';
 import { ReactComponent as BlueRightIcon } from 'assets/icons/blue-right.svg';
 import { ReactComponent as DownArrowIcon } from 'assets/icons/down-arrow.svg';
 import { ReactComponent as PopupIcon } from 'assets/icons/popup.svg';
+import { ReactComponent as HeroIcon } from 'assets/icons/hero-icon.svg';
 import { ReactComponent as PlayIcon } from 'assets/icons/play.svg';
 
 function App() {
   return (
     <>
-      <header className="bg-orange bg-opacity-[0.04] w-[100vw] sm:pt-3 px-3 sm:px-5 mb-24 pb-16">
+      <header className="bg-orange bg-opacity-[0.04] w-[100vw] sm:pt-3 px-3 sm:px-5 mb-20 pb-16">
         <Nav />
 
         <section className="mt-20 mx-4 sm:mx-8 lg:mx-28 pt-16 sm:pt-0 text-sm">
@@ -81,17 +82,85 @@ function App() {
         </section>
       </header>
 
-      <section className="bg-blue bg-opacity-[0.03] px-4 sm:px-8 lg:px-28 pt-16 pb-12 text-sm">
+      <section className="bg-blue bg-opacity-[0.03] px-8 lg:px-28 pt-16 pb-12 text-sm">
         <div className="flex flex-col gap-y-6 md:gap-y-0 md:flex-row md:justify-between px-5 md:px-0">
-          <span className='md:basis-[70%] text-center md:text-left'>
-            <h2 className='font-bold text-[20px] md:text-[25px] mb-4 leading-9'>Ready to Unlock Supply Chain Opportunities?</h2>
+          <span className="md:basis-[70%] text-center md:text-left">
+            <h2 className="font-bold text-[20px] md:text-[25px] mb-4 leading-9">
+              Ready to Unlock Supply Chain Opportunities?
+            </h2>
             <p>
               Join 300+ top brands that have trusted us with their freight
               forwarding
             </p>
           </span>
-          <Button btnType={'secondary'} classes={'self-center'}>Get started</Button>
+          <Button btnType={'secondary'} classes={'self-center'}>
+            Get started
+          </Button>
         </div>
+
+        <footer className="mt-16 sm:mt-24 mb-14">
+          <div className="flex flex-wrap justify-between gap-y-7">
+            <span className="basis-[23%] hidden sm:block">
+              <a href="#">
+                <HeroIcon className="cursor-pointer w-20 sm:w-[unset] mb-4" />
+              </a>
+              <p className="mb-1 font-semibold">T: +2347040119703</p>
+              <p className="font-semibold">E: hello@mvx.trade</p>
+              <p className="font-semibold my-2">Austin:</p>
+              <p>
+                7000 North Mopac Expressway, <br />
+                Austin, TX, 78731 <br />
+                T: +1 512 514 6221
+              </p>
+              <p className="font-semibold mt-2 mb-1">Lagos:</p>
+              <p>
+                19 Dr. S Ezekuse Close, <br />
+                Lekki Phase 1, Lagos
+              </p>
+            </span>
+            <span className="basis-[50%] md:basis-0 translate-y-4">
+              <h4 className="text-blue font-semibold text-[16px] mb-4">Home</h4>
+              <ul className="flex flex-col gap-y-4 font-medium sm:w-max">
+                <li className="cursor-pointer">Home</li>
+                <li className="cursor-pointer">About</li>
+                <li className="cursor-pointer">Partners</li>
+                <li className="cursor-pointer">Careers</li>
+              </ul>
+            </span>
+            <span className="basis-[50%] md:basis-0 translate-y-4">
+              <h4 className="text-blue font-semibold text-[16px] mb-4">
+                Services
+              </h4>
+              <ul className="flex flex-col gap-y-4 font-medium sm:w-max">
+                <li className="cursor-pointer">Freight Forwarding</li>
+                <li className="cursor-pointer">Customs</li>
+                <li className="cursor-pointer">Trade Finance</li>
+                <li className="cursor-pointer">Land Haulage</li>
+                <li className="cursor-pointer">Track Shipment</li>
+              </ul>
+            </span>
+            <span className="basis-[50%] md:basis-[10%] translate-y-4">
+              <h4 className="text-blue font-semibold text-[16px] mb-4 sm:w-max">
+                Resources
+              </h4>
+              <ul className="flex flex-col gap-y-4 font-medium">
+                <li className="cursor-pointer">Help & Support</li>
+                <li className="cursor-pointer">Feedback</li>
+                <li className="cursor-pointer">Referral</li>
+              </ul>
+            </span>
+            <span className="basis-[50%] md:basis-0 translate-y-4">
+              <h4 className="text-blue font-semibold text-[16px] mb-4">
+                Legal
+              </h4>
+              <ul className="flex flex-col gap-y-4 font-medium sm:w-max">
+                <li className="cursor-pointer">Privacy policy</li>
+                <li className="cursor-pointer">Cookie policy</li>
+                <li className="cursor-pointer">Terms & Conditions</li>
+              </ul>
+            </span>
+          </div>
+        </footer>
       </section>
     </>
   );
